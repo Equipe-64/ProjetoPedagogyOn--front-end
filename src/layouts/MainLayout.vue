@@ -13,17 +13,25 @@
 
         <q-toolbar-title class="flex justify-between">
           <q-avatar>
-          <img src="img/Logo.png">
-        </q-avatar>
-          <q-btn-toggle
-        flat stretch
-        toggle-color="yellow"
-        :options="[
-          {label: 'Login', value: 'login'},
-          {label: 'Cadastrar', value: 'cadastrar'}
-        ]"
-      />
+            <img src="img/Logo.png">
+          </q-avatar>
         </q-toolbar-title>
+        <q-btn stretch flat icon="login" label="Login" />
+        <q-btn-dropdown color="secondary" label="Cadastrar" dropdown-icon="change_history">
+      <q-list>
+        <q-item clickable v-close-popup @click="onItemClick">
+          <q-item-section>
+            <q-item-label>Profissonais</q-item-label>
+          </q-item-section>
+        </q-item>
+
+        <q-item clickable v-close-popup @click="onItemClick">
+          <q-item-section>
+            <q-item-label>Pais/Responsáveis</q-item-label>
+          </q-item-section>
+        </q-item>
+      </q-list>
+    </q-btn-dropdown>
 
         <div></div>
       </q-toolbar>
@@ -62,7 +70,7 @@ import EssentialLink from 'components/EssentialLink.vue'
 const linksData = [
   {
     title: 'HOME',
-    caption: 'Página principal',
+    caption: 'Página Principal',
     icon: 'home',
     link: '/'
   },
@@ -74,7 +82,7 @@ const linksData = [
   },
   {
     title: 'INSTITUICÕES',
-    caption: 'Nossos parceiros',
+    caption: 'Nossos Parceiros',
     icon: 'home_work',
     link: '/'
   },
@@ -100,6 +108,12 @@ export default {
       leftDrawerOpen: false,
       essentialLinks: linksData
     }
+  },
+  methods: {
+    onItemClick () {
+      console.log('Clicked on an Item')
+    }
   }
 }
+
 </script>
