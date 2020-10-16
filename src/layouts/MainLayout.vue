@@ -12,9 +12,7 @@
         />
 
         <q-toolbar-title class="flex justify-between">
-          <q-avatar>
-            <img src="img/Logo.png">
-          </q-avatar>
+          <img src="https://i.imgur.com/RRmh8df.png" >
         </q-toolbar-title>
         <q-btn stretch flat icon="login" label="Login" />
         <q-btn-dropdown color="secondary" label="Cadastrar" dropdown-icon="change_history">
