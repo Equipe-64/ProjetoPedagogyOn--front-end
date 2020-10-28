@@ -17,13 +17,13 @@
         <q-btn stretch flat icon="login" label="Login" />
         <q-btn-dropdown color="secondary" label="Cadastrar" dropdown-icon="change_history">
       <q-list>
-        <q-item clickable v-close-popup @click="onItemClick">
+        <q-item to="/cadastro1" clickable v-close-popup @click="onItemClick">
           <q-item-section>
             <q-item-label>Profissonais</q-item-label>
           </q-item-section>
         </q-item>
 
-        <q-item clickable v-close-popup @click="onItemClick">
+        <q-item to="/cadastro2" clickable v-close-popup @click="onItemClick">
           <q-item-section>
             <q-item-label>Pais/Responsáveis</q-item-label>
           </q-item-section>
