@@ -76,7 +76,7 @@ const linksData = [
     title: 'NOSSO SISTEMA',
     caption: 'Como tudo funciona',
     icon: 'dvr',
-    link: '/'
+    link: '/sobrenos'
   },
   {
     title: 'INSTITUICÕES',
