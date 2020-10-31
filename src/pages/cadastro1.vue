@@ -3,11 +3,9 @@
     <div class="q-pa-md">
       <h4 class="text-weight-bold">CADASTRO DE PROFISSIONAIS</h4>
     <div class="q-gutter-md" style="max-width: 300px">
-     <q-input standout v-model="text" label="Codigo" />
-
      <q-input standout v-model="text" type="textarea" label = "especialização profissional" />
 
-      <q-input v-model="text" label="Nome" />
+      <q-input standout v-model="text" label="Nome" />
 
       <q-input standout v-model="text" label="CPF" />
 
@@ -54,9 +52,9 @@
         standout
         v-model="phone"
         label="Phone"
-        mask="(###) ### - ####"
+        mask="(##) ##### - ####"
         fill-mask
-        hint="Mask: (###) ### - ####"
+        hint="Mask: (##) ##### - ####"
       />
 
       <q-input standout v-model="text" type="textarea" label = "especificações" />
