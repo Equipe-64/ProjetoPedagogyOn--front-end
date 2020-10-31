@@ -82,19 +82,19 @@ const linksData = [
     title: 'INSTITUICÕES',
     caption: 'Nossos Parceiros',
     icon: 'home_work',
-    link: '/'
+    link: '/instituicoes'
   },
   {
     title: 'PROFISSIONAIS',
-    caption: 'Busque por um profissional',
+    caption: 'Profissionais Cadastrados',
     icon: 'person_search',
-    link: '/'
+    link: '/profissionais'
   },
   {
     title: 'FALE CONOSCO',
     caption: 'Nossas redes e contados',
     icon: 'phone',
-    link: '/'
+    link: '/faleconosco'
   }
 ]
 
