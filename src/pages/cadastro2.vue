@@ -9,12 +9,7 @@
 
       <q-input standout v-model="text" label="RG" />
 
-      <q-input standout v-model="text" label="CPF do filiado(filho(a))" />
-
-      <q-input standout v-model="text" label="RG do filiado (filho(a))" />
-
       <q-input standout v-model="text" label="Orgão Expedidor" />
-
          <q-input color="orange" standout bottom-slots v-model="text" label="localização" counter clearable>
         <template v-slot:prepend>
           <q-icon name="place" />
@@ -67,6 +62,6 @@
 
 <script>
 export default {
-  // name: 'PageName',
+
 }
 </script>
