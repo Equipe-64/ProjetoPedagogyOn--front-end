@@ -12,9 +12,9 @@
       </div>
     </div>
 
-    <p class="text-h5 text-weight-bold text-left q-pl-xl q-mt-xl">COMUNICAÇÃO RAPIDA E EFICAZ</p>
+    <p class="text-h5 text-weight-bold text-left q-pl-xl q-pt-xl q-mt-xl">COMUNICAÇÃO RAPIDA E EFICAZ</p>
     <div class="q-mb-lg">
-        <img class="float-right on-left" src="https://i.imgur.com/K3uUt2M.png"
+        <img class="float-right on-left q-mt-sx" src="https://i.imgur.com/K3uUt2M.png"
         style="max-width: 700px; height: 350px;"
         />
       </div>
@@ -24,14 +24,14 @@
       </div>
     </div>
 
-    <p class="text-h5 text-weight-bold text-right  q-pt-lg q-pr-xl">SEGURANÇA PARA TODOS</p>
+    <p class="text-h5 text-weight-bold text-right q-mt-xl q-pt-xl q-pr-xl">SEGURANÇA PARA TODOS</p>
     <div class="q-mb-sm">
         <img class="float-left on-right" src="https://i.imgur.com/Axro8Q0.png"
         style="max-width: 600px; height: 300px;"
         />
       </div>
     <div class="row justify-end">
-      <div class="col-9 q-mr-xl q-pb-xl">
+      <div class="col-10 q-mr-xl q-pr-md q-mt-xl q-pb-xl">
     <p class="text-justify text-weight-medium text-body1 q-mb-xl">Sabemos que a tecnologia vem para o nosso beneficio e que acima de tudo devemos preservar as pessoas que usufruem dela, por isso pensamos em um sistema completo de segurança para garantir a integridade de todos os nossos usuários, os protegendo de possiveis calotes financeiros ou qualquer tipo de ataque virtual.</p>
       </div>
     </div>
