@@ -20,13 +20,13 @@
       <q-list>
         <q-item to="/cadastro1" clickable v-close-popup @click="onItemClick">
           <q-item-section>
-            <q-item-label>profissionais</q-item-label>
+            <q-item-label>Profissionais</q-item-label>
           </q-item-section>
         </q-item>
 
         <q-item to="/cadastro2" clickable v-close-popup @click="onItemClick">
           <q-item-section>
-            <q-item-label>responsaveis</q-item-label>
+            <q-item-label>Pais/Responsaveis</q-item-label>
           </q-item-section>
         </q-item>
       </q-list>
