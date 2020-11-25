@@ -3,6 +3,7 @@
     <q-header elevated>
       <q-toolbar>
         <q-btn
+          color="secondary"
           flat
           dense
           round
@@ -14,7 +15,7 @@
         <q-toolbar-title class="flex justify-between">
           <img src="https://i.imgur.com/RRmh8df.png" >
         </q-toolbar-title>
-        <q-btn stretch flat to="/login" icon="login" label="Login" />
+        <q-btn stretch flat to="/login" icon="login" color="secondary" label="Login" />
         <q-btn-dropdown color="secondary" label="Cadastrar" dropdown-icon="change_history">
       <q-list>
         <q-item to="/cadastro1" clickable v-close-popup @click="onItemClick">
