@@ -1,9 +1,9 @@
 <template>
   <q-page padding>
-    <div class="row justify-end">
-      <div class="col-9 q-mr-xl q-pb-xl">
+    <div class="row">
+      <div class="col-12 q-mr-xl q-pb-xl">
         <img class="float-left on-right" src="https://imgur.com/TmwlneQ.png"
-        style="max-width: 700px; height: 150px;"
+        style="max-width: 1000px; height: 250px;"
         />
       </div>
     </div>

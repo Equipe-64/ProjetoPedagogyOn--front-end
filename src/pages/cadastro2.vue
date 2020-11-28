@@ -1,7 +1,8 @@
 <template>
   <q-page padding>
-    <div class="q-pa-md">
-      <h4 class="text-weight-bold">CADASTRO DE PAIS/RESPONSÁVEIS</h4>
+    <div class="row justify-center">
+      <h4 class="content-start">CADASTRO DE PAIS/RESPONSÁVEIS</h4>
+    </div>
     <div class="q-gutter-md" style="max-width: 300px">
       <q-input standout v-model="text" label="Nome" />
 
@@ -55,7 +56,6 @@
       />
 
       <q-input standout v-model="text" type="textarea" label = "especificações" />
-    </div>
   </div>
   </q-page>
 </template>
