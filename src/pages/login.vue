@@ -15,8 +15,8 @@
           <q-card-actions class="q-px-md">
             <q-btn unelevated color="light-blue-7" size="lg" class="full-width" label="Login" />
           </q-card-actions>
-          <h6 class="q-mb-xs">Novo aqui?</h6>
-              <q-btn-dropdown color="secondary" class="q-mt-xs" label="cadastre-se">
+          <h6 id="nome1" class="q-mb-xs">Novo aqui?</h6>
+              <q-btn-dropdown id="button" color="secondary" class="q-mt-xs" label="cadastre-se">
       <q-list>
         <q-item to="/cadastro1" clickable v-close-popup @click="onItemClick">
           <q-item-section>
@@ -45,5 +45,11 @@ export default {
 <style>
 .q-card {
   width: 360px;
+}
+#button{
+margin-left: 23%;
+}
+#nome1{
+  margin-left: 31%;
 }
 </style>

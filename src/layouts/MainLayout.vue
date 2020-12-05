@@ -16,7 +16,7 @@
           <img src="https://i.imgur.com/RRmh8df.png" >
         </q-toolbar-title>
         <q-btn stretch flat to="/login" icon="login" color="secondary" label="Login" />
-        <q-btn-dropdown color="secondary" label="Cadastrar" dropdown-icon="change_history">
+        <q-btn-dropdown color="secondary" label="Cadastrar" icon="person">
       <q-list>
         <q-item to="/cadastro1" clickable v-close-popup @click="onItemClick">
           <q-item-section>
@@ -31,6 +31,7 @@
         </q-item>
       </q-list>
     </q-btn-dropdown>
+    <q-btn stretch flat to="/busca" icon="search" color="secondary" label="search" />
 
         <div></div>
       </q-toolbar>

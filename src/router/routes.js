@@ -9,7 +9,8 @@ const routes = [
       { path: '/cadastro2', component: () => import('pages/cadastro2.vue') },
       { path: '/instituicoes', component: () => import('pages/instituicoes.vue') },
       { path: '/sobrenos', component: () => import('pages/sobrenos.vue') },
-      { path: '/faleconosco', component: () => import('pages/faleconosco.vue') }
+      { path: '/faleconosco', component: () => import('pages/faleconosco.vue') },
+      { path: '/busca', component: () => import('pages/busca.vue') }
 
     ]
   },
@@ -27,6 +28,7 @@ const routes = [
     path: '*',
     component: () => import('pages/Error404.vue')
   }
+
 ]
 
 export default routes
