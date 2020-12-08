@@ -10,7 +10,9 @@ const routes = [
       { path: '/instituicoes', component: () => import('pages/instituicoes.vue') },
       { path: '/sobrenos', component: () => import('pages/sobrenos.vue') },
       { path: '/faleconosco', component: () => import('pages/faleconosco.vue') },
-      { path: '/busca', component: () => import('pages/busca.vue') }
+      { path: '/busca', component: () => import('pages/busca.vue') },
+      { path: '/excluirpagina', component: () => import('pages/excluirpagina.vue') },
+      { path: '/testes', component: () => import('pages/testes.vue') }
 
     ]
   },
