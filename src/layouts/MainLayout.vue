@@ -103,6 +103,12 @@ const linksData = [
     caption: 'Página de pagamento',
     icon: 'payment',
     link: '/pagamento'
+  },
+  {
+    title: 'CHAT',
+    caption: 'Converse com os profissionais',
+    icon: 'chat',
+    link: '/usuarios'
   }
 ]
 

@@ -18,10 +18,18 @@ const routes = [
   },
   {
     path: '/Login',
-    component: () => import('layouts/LoginLayout.vue'),
+    component: () => import('layouts/WhiteLayout.vue'),
     children: [
       { path: '/', component: () => import('pages/login.vue') },
       { path: '/pagamento', component: () => import('pages/PgPagamento.vue') }
+    ]
+  },
+  {
+    path: '/usuarios',
+    component: () => import('layouts/ChatLayout.vue'),
+    children: [
+      { path: '/usuarios', component: () => import('pages/paginaUsuarios.vue') },
+      { path: '/chat', component: () => import('pages/chat.vue') }
     ]
   },
 
