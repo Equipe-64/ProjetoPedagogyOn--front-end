@@ -68,7 +68,7 @@ export default {
     return {
       model: null,
       options: [
-        'Homem', 'Mulher', 'Outros'
+        'M', 'F', 'O'
       ]
     }
   },
