@@ -22,41 +22,9 @@
         <q-input outlined v-model="text" label="Validade" />
         <q-input outlined v-model="text" label="CVV" />
         </div>
-        <div class="q-pa-md">
-    <q-btn-dropdown label="Selecione o número de parcelas">
-      <q-list>
-        <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section>
-            <q-item-label>1 vez</q-item-label>
-          </q-item-section>
-        </q-item>
-
-        <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section>
-            <q-item-label>2 vezes</q-item-label>
-          </q-item-section>
-        </q-item>
-
-        <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section>
-            <q-item-label>3 vezes</q-item-label>
-          </q-item-section>
-        </q-item>
-
-        <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section>
-            <q-item-label>4 vezes</q-item-label>
-          </q-item-section>
-        </q-item>
-
-        <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section>
-            <q-item-label>5 vezes</q-item-label>
-          </q-item-section>
-        </q-item>
-      </q-list>
-    </q-btn-dropdown>
-  </div>
+        <div class="q-mt-md">
+          <q-select outlined v-model="model" :options="options" label="Selecione o número de Parcelas" />
+        </div>
       </q-card-section>
 
       <q-card-actions align="around">
@@ -71,7 +39,11 @@ export default {
   name: 'PagePagamento',
   data () {
     return {
-      text: ''
+      text: '',
+      model: null,
+      options: [
+        '1 vez', '2 vezes', '3 vezes', '4 vezes', '5 vezes'
+      ]
     }
   },
   methods: {
@@ -100,12 +72,10 @@ p{
 .text-data{
   font-size: 12px;
 }
-.q-input {
+.q-input,
+.q-select {
   background-color: #F0F8FF
   max-width 400px
-}
-.q-btn-dropdown {
-  background-color: #ff6126;
 }
 .q-btn {
   color: #F5F5F5
