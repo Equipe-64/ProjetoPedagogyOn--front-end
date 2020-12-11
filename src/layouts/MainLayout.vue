@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
+      <q-toolbar id="tolbar">
         <q-btn
           color="secondary"
           flat
@@ -117,3 +117,8 @@ export default {
 }
 
 </script>
+<style>
+#tolbar{
+padding-bottom: 2px;
+}
+</style>
