@@ -97,6 +97,12 @@ const linksData = [
     caption: 'Nossas redes e contados',
     icon: 'phone',
     link: '/faleconosco'
+  },
+  {
+    title: 'PAGAMENTO',
+    caption: 'Página de pagamento',
+    icon: 'payment',
+    link: '/pagamento'
   }
 ]
 

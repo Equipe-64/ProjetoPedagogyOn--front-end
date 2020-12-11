@@ -20,7 +20,8 @@ const routes = [
     path: '/Login',
     component: () => import('layouts/LoginLayout.vue'),
     children: [
-      { path: '/', component: () => import('pages/login.vue') }
+      { path: '/', component: () => import('pages/login.vue') },
+      { path: '/pagamento', component: () => import('pages/PgPagamento.vue') }
     ]
   },
 
