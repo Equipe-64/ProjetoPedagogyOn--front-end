@@ -14,6 +14,8 @@
 
       <q-input standout v-model="date" type="date" hint="Data de Nascimento" />
 
+      <q-select standout v-model="model" :options="options" label="sexo" />
+
       <q-input standout v-model="text" type="textarea" label = "Observações" />
     </div>
   </div>
@@ -22,6 +24,18 @@
 
 <script>
 export default {
-  // name: 'PageName',
+  data () {
+    return {
+      model: null,
+      options: [
+        'Homem', 'Mulher', 'Outros'
+      ]
+    }
+  },
+  data2 () {
+    return {
+      text: ''
+    }
+  }
 }
 </script>
