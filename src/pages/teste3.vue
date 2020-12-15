@@ -4,7 +4,7 @@
       <div class="row flex-center">
         <q-card square class="shadow-24" style="width:1300px;height:1248px;">
           <q-card-section class="bg-teal-7">
-            <h4 id="titulo" class="text-h5 text-white">CADASTRAR PAIS/RESPONSAVEIS</h4>
+            <h4 id="titulo" class="text-h5 text-white">CADASTRAR PROFISSIONAIS</h4>
             <div class="absolute-bottom-right q-pr-md" style="transform: translateY(50%);">
               <q-btn fab icon="close" color="teal-4" />
             </div>
