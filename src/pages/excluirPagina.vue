@@ -3,11 +3,11 @@
    <div class="fullscreen bg-blue text-white text-center q-pa-md flex flex-center">
     <div>
       <div style="font-size: 10vh">
-        finalizar o serviço ?
+        Finalizar o serviço ?
       </div>
 
       <div class="text-h2" style="opacity:.4">
-        deseja mesmo excluir sua conta ?
+        Deseja mesmo excluir sua conta ?
       </div>
 
       <q-btn
