@@ -4,14 +4,14 @@
       <h4 class="content-start q-mt-md">CADASTRO DE PAIS/RESPONSÁVEIS</h4>
     </div>
     <div class="q-gutter-md q-mb-md" style="max-width: 300px">
-      <q-input standout v-model="text" label="Nome" />
+      <q-input standout v-model="novoCliente.nome" label="Nome" />
 
-      <q-input standout v-model="text" label="CPF" />
+      <q-input standout v-model="novoCliente.cpf" label="CPF" />
 
-      <q-input standout v-model="text" label="RG" />
+      <q-input standout v-model="novoCliente.rg" label="RG" />
 
-      <q-input standout v-model="text" label="Orgão Expedidor" />
-         <q-input color="orange" standout bottom-slots v-model="text" label="localização" counter clearable>
+      <q-input standout v-model="novoCliente.orgao_exp" label="Orgão Expedidor" />
+         <q-input color="orange" standout bottom-slots v-model="novoCliente.endereco" label="localização" counter clearable>
         <template v-slot:prepend>
           <q-icon name="place" />
         </template>
@@ -24,57 +24,69 @@
         </template>
       </q-input>
 
-      <q-input standout v-model="text" label="CEP" />
+      <q-input standout v-model="novoCliente.cep" label="CEP" />
 
-      <q-input standout v-model="text" label="Cidade" />
+      <q-input standout v-model="novoCliente.cidade" label="Cidade" />
 
-      <q-input standout v-model="text" label="Estado" />
+      <q-input standout v-model="novoCliente.estado" label="Estado" />
 
-      <q-input standout v-model="date" type="date" hint="Data de Nascimento" />
+      <q-input standout v-model="novoCliente.data_nasc" type="date" hint="Data de Nascimento" />
 
-      <q-select standout v-model="model" :options="options" label="sexo" />
+      <q-input standout v-model="novoCliente.sexo" label="Sexo M-Masculino, F-Feminino" />
 
-      <q-input standout v-model="password" type="password" hint="senha" />
+      <q-input standout v-model="novoCliente.senha" type="password" hint="senha" />
 
-      <q-input standout v-model="password" :type="isPwd ? 'password' : 'text'" hint="repetir a senha">
-        <template v-slot:append>
-          <q-icon
-            :name="isPwd ? 'visibility_off' : 'visibility'"
-            class="cursor-pointer"
-            @click="isPwd = !isPwd"
-          />
-        </template>
-      </q-input>
-
-      <q-input standout v-model="email" type="email" hint="Email" />
+      <q-input standout v-model="novoCliente.email" type="email" hint="Email" />
 
       <q-input
         standout
-        v-model="phone"
+        v-model="novoCliente.telefone"
         label="telefone"
         mask="(##) ##### - ####"
         fill-mask
         hint="Mask: (##) ##### - ####"
       />
+      <div class="text-right col-12">
+        <q-btn color="secondary" label="Salvar" @click="createOne" />
+      </div>
 
-      <q-input standout v-model="text" type="textarea" label = "especificações" />
   </div>
   </q-page>
 </template>
 
 <script>
 export default {
+  name: 'cadastro2',
   data () {
     return {
-      model: null,
-      options: [
-        'M', 'F', 'O'
-      ]
+      novoCliente: {
+        nome: '',
+        cpf: '',
+        rg: '',
+        orgao_exp: '',
+        data_nasc: '',
+        sexo: '',
+        endereco: '',
+        cep: '',
+        cidade: '',
+        estado: '',
+        telefone: '',
+        email: '',
+        senha: ''
+      }
     }
   },
-  data2 () {
-    return {
-      text: ''
+  methods: {
+    createOne
+    () {
+      this.$axios.post('http://localhost:3000/clienteRoute', this.novoCliente).then(response => {
+        console.log(response.data)
+        this.$q.notify({
+          message: 'Cadastrado com sucesso!',
+          color: 'positive'
+        })
+        this.$router.push('/')
+      })
     }
   }
 }
