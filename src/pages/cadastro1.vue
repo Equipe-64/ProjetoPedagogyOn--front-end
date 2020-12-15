@@ -5,17 +5,17 @@
       <h4 class="content-start q-mt-md">CADASTRO DE PROFISSIONAIS</h4>
     </div>
     <div class="q-gutter-md q-mb-md" style="max-width: 300px">
-     <q-input standout v-model="text" type="textarea" label = "especialização profissional" />
+     <q-input standout v-model="novoProfissional.especializacao" type="textarea" label = "Especialização Profissional" />
 
-      <q-input standout v-model="text" label="Nome" />
+      <q-input standout v-model="novoProfissional.nome" label="Nome" />
 
-      <q-input standout v-model="text" label="CPF" />
+      <q-input standout v-model="novoProfissional.cpf" label="CPF" />
 
-      <q-input standout v-model="text" label="RG" />
+      <q-input standout v-model="novoProfissional.rg" label="RG" />
 
-      <q-input standout v-model="text" label="Orgão Expedidor" />
+      <q-input standout v-model="novoProfissional.orgao_exp" label="Orgão Expedidor" />
 
-         <q-input color="orange" standout bottom-slots v-model="text" label="localização" counter clearable>
+         <q-input color="orange" standout bottom-slots v-model="novoProfissional.endereco" label="localização" counter clearable>
         <template v-slot:prepend>
           <q-icon name="place" />
         </template>
@@ -28,41 +28,35 @@
         </template>
       </q-input>
 
-      <q-input standout v-model="text" label="CEP" />
+      <q-input standout v-model="novoProfissional.cep" label="CEP" />
 
-      <q-input standout v-model="text" label="Cidade" />
+      <q-input standout v-model="novoProfissional.cidade" label="Cidade" />
 
-      <q-input standout v-model="text" label="Estado" />
+      <q-input standout v-model="novoProfissional.estado" label="Estado" />
 
-      <q-input standout v-model="date" type="date" hint="Data de Nascimento" />
+      <q-input standout v-model="novoProfissional.data_nasc" type="date" hint="Data de Nascimento" />
 
-      <q-select standout v-model="model" :options="options" label="sexo" />
+      <q-input standout v-model="novoProfissional.sexo" label="Sexo M-Masculino, F-Feminino" />
 
-      <q-input standout v-model="password" type="password" hint="senha" />
+      <q-input standout v-model="novoProfissional.senha" type="password" hint="senha" />
 
-      <q-input standout v-model="password" :type="isPwd ? 'password' : 'text'" hint="repetir a senha">
-        <template v-slot:append>
-          <q-icon
-            :name="isPwd ? 'visibility_off' : 'visibility'"
-            class="cursor-pointer"
-            @click="isPwd = !isPwd"
-          />
-        </template>
-      </q-input>
-
-      <q-input standout v-model="email" type="email" hint="Email" />
+      <q-input standout v-model="novoProfissional.email" type="email" hint="Email" />
 
       <q-input
         standout
-        v-model="phone"
+        v-model="novoProfissional.telefone"
         label="Phone"
         mask="(##) ##### - ####"
         fill-mask
         hint="Mask: (##) ##### - ####"
       />
-
-      <q-input standout v-model="text" type="textarea" label = "especificações" />
+      
+      <q-input standout v-model="novoProfissional.observacoes" type="textarea" label = "Observações" />
+      <div class="text-right col-12">
+        <q-btn color="secondary" label="Salvar" @click="createOne" />
+      </div>
     </div>
+<<<<<<< HEAD
     <div class="contact_us" id="id_contact_us">
 <div style="background-color: #000000ad !important;">
 <div class="row" id="id_news">
@@ -116,22 +110,47 @@
                      :style="'background:'+ theme_color +'; color: white !important;'" icon="email" />
   </div>
         </q-toolbar>
+=======
+
+>>>>>>> 3262dadd99702c55fa1c70e0830b6a82013b0e5d
   </div>
   </q-page>
 </template>
 <script>
 export default {
+  name: 'cadastro1',
   data () {
     return {
-      model: null,
-      options: [
-        'M', 'F', 'O'
-      ]
+      novoProfissional: {
+        especializacao: '',
+        nome: '',
+        cpf: '',
+        rg: '',
+        orgao_exp: '',
+        data_nasc: '',
+        sexo: '',
+        endereco: '',
+        cep: '',
+        cidade: '',
+        estado: '',
+        telefone: '',
+        email: '',
+        senha: '',
+        observacoes: ''
+      }
     }
   },
-  data2 () {
-    return {
-      text: ''
+  methods: {
+    createOne
+    () {
+      this.$axios.post('http://localhost:3000/profissionalRoute', this.novoProfissional).then(response => {
+        console.log(response.data)
+        this.$q.notify({
+          message: 'Cadastrado com sucesso!',
+          color: 'positive'
+        })
+        this.$router.push('/')
+      })
     }
   }
 }
