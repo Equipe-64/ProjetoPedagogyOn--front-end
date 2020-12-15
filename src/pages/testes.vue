@@ -1,8 +1,12 @@
 <template>
   <q-page padding>
-    <div class="q-pa-md">
+    <div id="corpo" class="q-pa-md">
      <div class="row justify-center">
-      <h4 class="content-start q-mt-md">CADASTRO DE PROFISSIONAIS</h4>
+     <q-card class="my-card">
+      <q-card-section class="bg-teal text-white">
+        <div class="text-h6">cadastro profissionais</div>
+      </q-card-section>
+    </q-card>
     </div>
     <div class="q-gutter-md q-mb-md" style="max-width: 300px">
      <q-input standout v-model="text" type="textarea" label = "especialização profissional" />
