@@ -20,7 +20,7 @@
           <q-icon name="place" />
         </template>
         <template v-slot:append>
-          <q-icon name="favorite" />
+          <q-icon name="person" />
         </template>
 
         <template v-slot:hint>
