@@ -2,7 +2,7 @@
   <q-page padding>
     <div class="column q-pa-lg">
       <div class="row flex-center">
-        <q-card square class="shadow-24" style="width:1300px;height:1248px;">
+        <q-card square class="shadow-24" style="width:1300px;height:1310px;">
           <q-card-section class="bg-teal-7">
             <h4 id="titulo" class="text-h5 text-white">CADASTRAR PROFISSIONAIS</h4>
             <div class="absolute-bottom-right q-pr-md" style="transform: translateY(50%);">
@@ -13,7 +13,7 @@
             <q-form class="q-px-sm q-pt-xl q-pb-lg">
               <q-input square clearable v-model="novoProfissional.especializacao" label="Especializaçâo Profissional">
                 <template v-slot:prepend>
-                  <q-icon name="person" />
+                  <q-icon name="assignment" />
                 </template>
               </q-input>
               <q-input square clearable v-model="novoProfissional.nome" label="Nome">
@@ -56,7 +56,7 @@
                   <q-icon name="flag" />
                 </template>
               </q-input>
-                 <q-input square clearable v-model="novoProfissional.data_nasc" type="date" label="Nascimento">
+                 <q-input square clearable v-model="novoProfissional.data_nasc" type="date">
                 <template v-slot:prepend>
                   <q-icon name="calendar_today" />
                 </template>

@@ -90,7 +90,7 @@ const linksData = [
     title: 'PROFISSIONAIS',
     caption: 'Profissionais Cadastrados',
     icon: 'person_search',
-    link: '/profissionais'
+    link: '/profissional'
   },
   {
     title: 'FALE CONOSCO',

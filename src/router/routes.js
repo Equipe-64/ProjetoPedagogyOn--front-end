@@ -13,7 +13,8 @@ const routes = [
       { path: '/busca', component: () => import('pages/busca.vue') },
       { path: '/excluirpagina', component: () => import('pages/excluirpagina.vue') },
       { path: '/testes', component: () => import('pages/testes.vue') },
-      { path: '/testes2', component: () => import('pages/testes2.vue') }
+      { path: '/testes2', component: () => import('pages/testes2.vue') },
+      { path: '/profissional', component: () => import('pages/usuarios.vue') }
 
     ]
   },

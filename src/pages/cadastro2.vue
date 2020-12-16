@@ -2,7 +2,7 @@
   <q-page padding>
     <div class="column q-pa-lg">
       <div class="row flex-center">
-        <q-card square class="shadow-24" style="width:1300px;height:1248px;">
+        <q-card square class="shadow-24" style="width:1300px;height:1300px;">
           <q-card-section class="bg-teal-7">
             <h4 id="titulo" class="text-h5 text-white">CADASTRAR PAIS/RESPONSAVEIS</h4>
             <div class="absolute-bottom-right q-pr-md" style="transform: translateY(50%);">
@@ -51,7 +51,7 @@
                   <q-icon name="flag" />
                 </template>
               </q-input>
-                 <q-input square clearable v-model="novoCliente.data_nasc" type="date" label="Nascimento">
+                 <q-input square clearable v-model="novoCliente.data_nasc" type="date">
                 <template v-slot:prepend>
                   <q-icon name="calendar_today" />
                 </template>
@@ -90,16 +90,12 @@
           </q-card-section>
         </q-card>
       </div>
-<<<<<<< HEAD
-
-      <q-input standout v-model="text" type="textarea" label = "especificações" />
 
   </div>
   <div class="contact_us" id="id_contact_us">
-=======
     </div>
      <div class="contact_us" id="id_contact_us">
->>>>>>> fb7debef93e0e8fb170df372da94d8631cbd2df0
+
 <div style="background-color: #000000ad !important;">
 <div class="row" id="id_news">
   <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
