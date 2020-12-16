@@ -1,63 +1,102 @@
 <template>
   <q-page padding>
-    <div class="q-pa-md">
-     <div class="row justify-center">
-      <h4 class="content-start q-mt-md">CADASTRO DE PROFISSIONAIS</h4>
-    </div>
-    <div class="q-gutter-md q-mb-md" style="max-width: 300px">
-     <q-input standout v-model="novoProfissional.especializacao" type="textarea" label = "Especialização Profissional" />
-
-      <q-input standout v-model="novoProfissional.nome" label="Nome" />
-
-      <q-input standout v-model="novoProfissional.cpf" label="CPF" />
-
-      <q-input standout v-model="novoProfissional.rg" label="RG" />
-
-      <q-input standout v-model="novoProfissional.orgao_exp" label="Orgão Expedidor" />
-
-         <q-input color="orange" standout bottom-slots v-model="novoProfissional.endereco" label="localização" counter clearable>
-        <template v-slot:prepend>
-          <q-icon name="place" />
-        </template>
-        <template v-slot:append>
-          <q-icon name="person" />
-        </template>
-
-        <template v-slot:hint>
-          Endereço
-        </template>
-      </q-input>
-
-      <q-input standout v-model="novoProfissional.cep" label="CEP" />
-
-      <q-input standout v-model="novoProfissional.cidade" label="Cidade" />
-
-      <q-input standout v-model="novoProfissional.estado" label="Estado" />
-
-      <q-input standout v-model="novoProfissional.data_nasc" type="date" hint="Data de Nascimento" />
-
-      <q-input standout v-model="novoProfissional.sexo" label="Sexo M-Masculino, F-Feminino" />
-
-      <q-input standout v-model="novoProfissional.senha" type="password" hint="senha" />
-
-      <q-input standout v-model="novoProfissional.email" type="email" hint="Email" />
-
-      <q-input
-        standout
+    <div class="column q-pa-lg">
+      <div class="row flex-center">
+        <q-card square class="shadow-24" style="width:1300px;height:1248px;">
+          <q-card-section class="bg-teal-7">
+            <h4 id="titulo" class="text-h5 text-white">CADASTRAR PROFISSIONAIS</h4>
+            <div class="absolute-bottom-right q-pr-md" style="transform: translateY(50%);">
+              <q-btn fab icon="close" color="teal-4" />
+            </div>
+          </q-card-section>
+          <q-card-section>
+            <q-form class="q-px-sm q-pt-xl q-pb-lg">
+              <q-input square clearable v-model="novoProfissional.especializacao" label="Especializaçâo Profissional">
+                <template v-slot:prepend>
+                  <q-icon name="person" />
+                </template>
+              </q-input>
+              <q-input square clearable v-model="novoProfissional.nome" label="Nome">
+                <template v-slot:prepend>
+                  <q-icon name="person" />
+                </template>
+              </q-input>
+              <q-input square clearable v-model="novoProfissional.cpf" label="CPF">
+                <template v-slot:prepend>
+                  <q-icon name="picture_in_picture" />
+                </template>
+              </q-input>
+              <q-input square clearable v-model="novoProfissional.rg" label="RG">
+                <template v-slot:prepend>
+                  <q-icon name="fingerprint" />
+                </template>
+              </q-input>
+                 <q-input square clearable v-model="novoProfissional.orgao_exp" label="Orgão Expedidor">
+                <template v-slot:prepend>
+                  <q-icon name="fact_check" />
+                </template>
+              </q-input>
+                 <q-input square clearable v-model="novoProfissional.endereco" label="Localização">
+                <template v-slot:prepend>
+                  <q-icon name="place" />
+                </template>
+              </q-input>
+                 <q-input square clearable v-model="novoProfissional.cep" label="CEP">
+                <template v-slot:prepend>
+                  <q-icon name="home" />
+                </template>
+              </q-input>
+                 <q-input square clearable v-model="novoProfissional.cidade" label="Cidade">
+                <template v-slot:prepend>
+                  <q-icon name="location_city" />
+                </template>
+              </q-input>
+                 <q-input square clearable v-model="novoProfissional.estado" label="Estado">
+                <template v-slot:prepend>
+                  <q-icon name="flag" />
+                </template>
+              </q-input>
+                 <q-input square clearable v-model="novoProfissional.data_nasc" type="date" label="Nascimento">
+                <template v-slot:prepend>
+                  <q-icon name="calendar_today" />
+                </template>
+              </q-input>
+              <q-select id="sexo" square clearable v-model="novoProfissional.sexo" :options="options" label="Sexo" />
+              <q-input square clearable v-model="novoProfissional.senha" type="password" label="Senha">
+                <template v-slot:prepend>
+                  <q-icon name="lock" />
+                </template>
+              </q-input>
+              <q-input square clearable v-model="novoProfissional.email" type="email" label="Email">
+                <template v-slot:prepend>
+                  <q-icon name="email" />
+                </template>
+              </q-input>
+               <q-input
+        square clearable
         v-model="novoProfissional.telefone"
-        label="Phone"
+        label="Telefone"
         mask="(##) ##### - ####"
         fill-mask
         hint="Mask: (##) ##### - ####"
       />
-      
-      <q-input standout v-model="novoProfissional.observacoes" type="textarea" label = "Observações" />
-      <div class="text-right col-12">
-        <q-btn color="secondary" label="Salvar" @click="createOne" />
+         <q-input square clearable v-model="novoProfissional.observacoes" type="textarea" label="Especificações">
+                <template v-slot:prepend>
+                  <q-icon name="description" />
+                </template>
+              </q-input>
+            </q-form>
+          </q-card-section>
+          <q-card-actions class="q-px-lg">
+            <q-btn unelevated size="lg" color="teal-4" class="full-width text-white" label="cadastrar" @click="createOne" />
+          </q-card-actions>
+          <q-card-section class="text-center q-pa-sm">
+            <p class="text-grey-6">Volte para a pagina de Login </p>
+          </q-card-section>
+        </q-card>
       </div>
     </div>
-<<<<<<< HEAD
-    <div class="contact_us" id="id_contact_us">
+     <div class="contact_us" id="id_contact_us">
 <div style="background-color: #000000ad !important;">
 <div class="row" id="id_news">
   <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
@@ -110,15 +149,12 @@
                      :style="'background:'+ theme_color +'; color: white !important;'" icon="email" />
   </div>
         </q-toolbar>
-=======
 
->>>>>>> 3262dadd99702c55fa1c70e0830b6a82013b0e5d
-  </div>
   </q-page>
 </template>
 <script>
 export default {
-  name: 'cadastro1',
+  name: 'cadProfissional',
   data () {
     return {
       novoProfissional: {
@@ -137,7 +173,8 @@ export default {
         email: '',
         senha: '',
         observacoes: ''
-      }
+      },
+      options: ['M', 'F']
     }
   },
   methods: {
@@ -157,5 +194,17 @@ export default {
 </script>
 
 <style>
+#titulo{
+  object-position: center;
+  margin-left: 38%;
+}
+.contact_us{
+
+      background: url(https://image.winudf.com/v2/image/Y29tLndLaWRzU2Nob29sXzUxMzE2MTZfc2NyZWVuXzBfaml2N2QzamI/screen-0.jpg?fakeurl=1&type=.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
 
 </style>
