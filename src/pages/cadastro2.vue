@@ -50,7 +50,6 @@
         <q-btn color="secondary" label="Salvar" @click="createOne" />
       </div>
 
-<<<<<<< HEAD
       <q-input standout v-model="text" type="textarea" label = "especificações" />
 
   </div>
