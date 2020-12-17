@@ -1,43 +1,82 @@
 <template>
-  <q-page padding class="row justify-center items-center">
-    <div class="q-pa-md row items-start q-gutter-md">
-    <q-card class="my-card">
-      <img src="https://cdn.quasar.dev/img/mountains.jpg">
-
-      <q-card-section>
-        <div class="text-h6">Our Changing Planet</div>
-        <div class="text-subtitle2">by John Doe</div>
-      </q-card-section>
-
-      <q-card-section class="q-pt-none">
-        {{ lorem }}
-      </q-card-section>
-    </q-card>
-    <q-card class="my-card">
-      <img src="https://cdn.quasar.dev/img/mountains.jpg">
-
-      <q-card-section>
-        <div class="text-h6">{{novoProfissional.nome }}</div>
-        <div class="text-subtitle2">{{ novoProfissional.especializacao }}</div>
-      </q-card-section>
-
-      <q-card-section class="q-pt-none">
-        {{ novoProfissional.especializacao }}
-      </q-card-section>
-    </q-card>
-<q-card class="my-card">
-      <img src="https://cdn.quasar.dev/img/mountains.jpg">
-
-      <q-card-section>
-        <div class="text-h6">Our Changing Planet</div>
-        <div class="text-subtitle2">by John Doe</div>
-      </q-card-section>
-
-      <q-card-section class="q-pt-none">
-        {{novoProfissional.nome }}
-      </q-card-section>
-    </q-card>
-</div>
+  <q-page padding>
+    <div class="row q-gutter-lg">
+      <div class="col-md-2">
+        <q-card class="my-card">
+        <q-img
+          src="https://image.freepik.com/fotos-gratis/linda-secretaria-no-trabalho-em-seu-escritorio_53419-8205.jpg"
+          basic
+        >
+          <div class="absolute-bottom text-h6">
+            {{ Profissional[0].nome }}
+          </div>
+        </q-img>
+        <q-card-section>
+          {{ Profissional[0].especializacao }}
+        </q-card-section>
+        </q-card>
+      </div>
+      <div class="col-md-2">
+        <q-card class="my-card">
+        <q-img
+          src="https://image.freepik.com/fotos-gratis/linda-secretaria-no-trabalho-em-seu-escritorio_53419-8205.jpg"
+          basic
+        >
+          <div class="absolute-bottom text-h6">
+            {{ Profissional[1].nome }}
+          </div>
+        </q-img>
+        <q-card-section>
+          {{ Profissional[1].especializacao }}
+        </q-card-section>
+        </q-card>
+      </div>
+      <div class="col-md-2">
+        <q-card class="my-card">
+        <q-img
+          src="https://image.freepik.com/fotos-gratis/linda-secretaria-no-trabalho-em-seu-escritorio_53419-8205.jpg"
+          basic
+        >
+          <div class="absolute-bottom text-h6">
+            {{ Profissional[2].nome }}
+          </div>
+        </q-img>
+        <q-card-section>
+          {{ Profissional[2].especializacao }}
+        </q-card-section>
+        </q-card>
+      </div>
+      <div class="col-md-2">
+        <q-card class="my-card">
+        <q-img
+          src="https://image.freepik.com/fotos-gratis/linda-secretaria-no-trabalho-em-seu-escritorio_53419-8205.jpg"
+          basic
+        >
+          <div class="absolute-bottom text-h6">
+            {{ Profissional[3].nome }}
+          </div>
+        </q-img>
+        <q-card-section>
+          {{ Profissional[3].especializacao }}
+        </q-card-section>
+        </q-card>
+      </div>
+      <div class="col-md-2">
+        <q-card class="my-card">
+        <q-img
+          src="https://image.freepik.com/fotos-gratis/linda-secretaria-no-trabalho-em-seu-escritorio_53419-8205.jpg"
+          basic
+        >
+          <div class="absolute-bottom text-h6">
+            {{ Profissional[4].nome }}
+          </div>
+        </q-img>
+        <q-card-section>
+          {{ Profissional[4].especializacao }}
+        </q-card-section>
+        </q-card>
+      </div>
+    </div>
   </q-page>
 </template>
 
@@ -46,18 +85,18 @@ export default {
   name: 'profissional',
   data () {
     return {
-      Profissionals: []
+      Profissional: []
     }
   },
   methods: {
-    viewProfissionals () {
+    viewProfissional () {
       this.$axios.get('http://localhost:3000/profissionalRoute').then(response => {
-        this.Profissionals = response.data
+        this.Profissional = response.data
       })
     }
   },
   beforeMount () {
-    this.viewProfissionals()
+    this.viewProfissional()
   }
 }
 </script>
