@@ -28,7 +28,9 @@
       </q-card-section>
 
       <q-card-actions align="around">
-        <q-btn flat>Finalizar Pagamento</q-btn>
+        <q-btn flat>Pagar com o cartão</q-btn>
+        <p class="p2 q-mt-md">Ou</p>
+        <q-btn class="btn2" flat>Pagar com Boleto</q-btn>
       </q-card-actions>
     </q-card>
   </q-page>
@@ -78,6 +80,9 @@ p{
   max-width 400px
 }
 .q-btn {
+  color: #F5F5F5
+}
+.p2 {
   color: #F5F5F5
 }
 </style>
