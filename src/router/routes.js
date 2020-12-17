@@ -11,7 +11,6 @@ const routes = [
       { path: '/sobrenos', component: () => import('pages/sobrenos.vue') },
       { path: '/faleconosco', component: () => import('pages/faleconosco.vue') },
       { path: '/busca', component: () => import('pages/busca.vue') },
-      { path: '/excluirpagina', component: () => import('pages/excluirpagina.vue') },
       { path: '/testes', component: () => import('pages/testes.vue') },
       { path: '/testes2', component: () => import('pages/testes2.vue') },
       { path: '/profissional', component: () => import('pages/profissionais.vue') }

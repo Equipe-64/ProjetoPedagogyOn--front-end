@@ -9,10 +9,10 @@
             <q-card class="my-card-preco">
               <q-card-section>
                 <p class="text-h5">Consulta</p>
-                <p>2 hrs</p>
+                <p>1 hrs</p>
                 <p class="text-data q-mt-md">10 de Dezembro de 2020 | 15:00 hrs</p>
                 <q-separator />
-                <p class="text-h4 q-mt-xl">Valor: R$ 50,00</p>
+                <p class="text-h4 q-mt-xl">Valor: R$ 100,00</p>
               </q-card-section>
             </q-card>
         </div>
