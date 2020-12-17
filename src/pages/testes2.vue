@@ -1,109 +1,92 @@
 <template>
-  <q-page padding>
-<div class="q-pa-md">
-    <div class="q-gutter-md">
-      <q-carousel
-        v-model="slide"
-          arrows
-          animated
-          swipeable
-          navigation
-          infinite
-          autoplay
-          control-color="secondary"
-          transition-prev="slide-right"
-          transition-next="slide-left"
-        height="639px"
-        class="bg-primary text-white shadow-1 rounded-borders"
-      >
-      <q-carousel-slide name="alunos" class="q-pa-none" img-src="https://jeffersondealmeida.com.br/wp-content/uploads/2020/05/material-escolar-volta-as-aulas-crianca-na-escola-crianca-estudando-criancas-estudando-sala-de-aula-criancas-na-escola-1452088957910_1920x1279.jpg">
-<div class="full-height full-width flex flex-center" style="background-color: rgba(0, 0, 0, 0.68) !important;">
-            <div>
-              <div class="text-h2">A DEMOCRATIZAÇÃO DO ENSINO </div>
-              <div class="text-h4">A oportunidade de educação de qualidade para todos</div>
-<div class="q-pa-md flex flex-center">
-<q-btn size="md" color="secondary" label="read more" />
-</div>
-            </div>
-</div>
-          </q-carousel-slide>
-         <q-carousel-slide name="professores" class="q-pa-none" img-src="https://pmsaposse.sp.gov.br/wp-content/uploads/2018/06/como-deixar-feliz-minha-professora-da-escola-750x452.jpg">
-<div class="full-height full-width flex flex-center" style="background-color: rgba(0, 0, 0, 0.68) !important;">
-            <div>
-              <div class="text-h2">NOVA PORTA PARA O MERCADO </div>
-              <div class="text-h4">Sendo a porta de oportunidade profissionais</div>
-<div class="q-pa-md flex flex-center">
-<q-btn size="md" color="secondary" label="read more" />
-</div>
-            </div>
-</div>
-          </q-carousel-slide>
-                <q-carousel-slide name="computador" class="q-pa-none" img-src="https://correio-cdn2.cworks.cloud/fileadmin/_processed_/5/6/csm_shutterstock_258726044_ba05a194fe.jpg">
-<div class="full-height full-width flex flex-center" style="background-color: rgba(0, 0, 0, 0.68) !important;">
-            <div>
-              <div class="text-h2">NOVA PORTA PARA O MERCADO </div>
-              <div class="text-h4">Sendo a porta de oportunidade profissionais</div>
-<div class="q-pa-md flex flex-center">
-<q-btn size="md" color="secondary" label="read more" />
-</div>
-            </div>
-</div>
-          </q-carousel-slide>
-      </q-carousel>
-  </div>
-  <div class="row">
-          <div class="col-lg-6 flex-center">
-            <q-card class="q-pa-sm flex flex-center text-center box-shadow" style="margin: 40px;">
-
-       <q-card-section>
-         <q-icon size="110px" name="person" color="secondary"/>
-            <div class="text-h6">responsaveis</div>
-
-             </q-card-section>
-
-              <q-card-section class="q-pt-none">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt.
-              </q-card-section>
-            </q-card>
-        </div>
-         <div class="flex-center">
-          <div class="col-lg-12 flex-center">
-            <q-card class="q-pa-sm flex flex-center text-center box-shadow" style="margin: 40px;">
-
-       <q-card-section>
-         <q-icon size="110px" name="groups" color="secondary"/>
-            <div class="text-h6">profissionais</div>
-
-             </q-card-section>
-
-              <q-card-section class="q-pt-none">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt.
-              </q-card-section>
-            </q-card>
-        </div>
-    </div>
-    </div>
-     <div id="barra2" class="quote">
-          <div class="q-pt-xl full-width full-height flex flex-center" style="background-color: #00AEAE !important;">
-            <h3 class="text-white text-center">Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit, sed do
-              eiusmod tempor incididunt ut <br> labore et dolore magna aliqua.
-              <br>
-              <br>
-              <q-btn type="a" href="https://github.com/sponsors/mayank091193" size="lg"
-                     :style="'background:'+ theme_color +'; color: white'" label="de suporte"/>
-            </h3>
+  <q-page class="">
+<template>
+  <div class="q-pa-md row items-start q-gutter-md">
+    <q-card class="my-card" flat bordered>
+      <q-card-section horizontal>
+        <q-card-section class="q-pt-xs">
+          <div class="text-overline">Overline</div>
+          <div class="text-h5 q-mt-sm q-mb-xs">SIMPLICIDADE E OBJETIVIDADE</div>
+          <div class="text-caption text-grey">
+            Ser inclusivo consiste em fazer com que um máximo de pessoas possivel tenha acesso a areas e conteúdos em pró de todos, nosso sistema foi pensado para ser simples e direto sendo assim bastante intuitivo tanto para os que tem conhecimento tecnológico como para os que também precisam do serviço mas não entendem tanto das atuais tecnologias.
           </div>
-        </div>
-    <div class="contact_us" id="id_contact_us">
+        </q-card-section>
+
+        <q-card-section class="col-5 flex flex-center">
+          <q-img
+            class="rounded-borders"
+            src="https://i.imgur.com/R6X6ZW4.png"
+          />
+        </q-card-section>
+      </q-card-section>
+
+      <q-separator />
+
+      <q-card-actions>
+        <q-btn flat round icon="person" />
+        <q-btn flat color="secondary">
+          midia social
+        </q-btn>
+        <q-btn flat color="secondary">
+          contatos
+        </q-btn>
+      </q-card-actions>
+    </q-card>
+  </div>
+    <div class="q-pa-md row items-start q-gutter-md">
+    <q-card class="my-card2" flat bordered>
+      <q-card-section horizontal>
+        <q-card-section class="q-pt-xs">
+          <div class="text-overline">Overline</div>
+          <div class="text-h5 q-mt-sm q-mb-xs">COMUNICAÇÃO RAPIDA E EFICAZ</div>
+          <div class="text-caption text-grey">
+            Se nosso sistema consiste em ligar partes interessadas em um mesmo objetivo, então temos que trabalhar bem a forma em que podemos oferecer um sistema de comunicação, por isso de forma pensada temos nosso chat interno e um sistema de busca completo para que ambas as partes possam se localizar e contactar sem dificuldade
+          </div>
+        </q-card-section>
+
+        <q-card-section class="col-5 flex flex-center">
+          <q-img
+            class="rounded-borders"
+            src="https://i.imgur.com/K3uUt2M.png"
+          />
+        </q-card-section>
+      </q-card-section>
+
+      <q-separator />
+
+      <q-card-actions>
+        <q-btn flat round icon="person" />
+        <q-btn flat color="secondary">
+          midia social
+        </q-btn>
+        <q-btn flat color="secondary">
+          contatos
+        </q-btn>
+      </q-card-actions>
+    </q-card>
+  </div>
+  <template>
+  <div class="q-pa-md">
+    <q-card class="my-card3">
+      <q-parallax
+        src="https://www.portaliede.com.br/wp-content/uploads/2019/08/desigualdades_genero500x300.jpg"
+        :height="150"
+      />
+
+      <q-card-section>
+        <div class="text-h6">SEGURANÇA PARA TODOS</div>
+        <div class="text-subtitle2">Sabemos que a tecnologia vem para o nosso beneficio e que acima de tudo devemos preservar as pessoas que usufruem dela, por isso pensamos em um sistema completo de segurança para garantir a integridade de todos os nossos usuários, os protegendo de possiveis calotes financeiros ou qualquer tipo de ataque virtual</div>
+      </q-card-section>
+    </q-card>
+  </div>
+  <div class="contact_us" id="id_contact_us">
 <div style="background-color: #000000ad !important;">
 <div class="row" id="id_news">
   <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-    <h5 class="text-center text-white">Contact Us
+    <h5 class="text-center text-white">Entre em contato
       <br>
       <span
-        class="text-center text-grey text-h6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        class="text-center text-grey text-h6">Deixe seu feedback ou entre em contato</span>
     </h5>
   </div>
 </div>
@@ -149,8 +132,8 @@
                      :style="'background:'+ theme_color +'; color: white !important;'" icon="email" />
   </div>
         </q-toolbar>
-
-</div>
+</template>
+</template>
   </q-page>
 </template>
 
@@ -158,16 +141,30 @@
 export default {
   data () {
     return {
-      slide: 'style',
-      lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.'
+      expanded: false,
+      lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
     }
   }
 }
-
 </script>
 
 <style>
-    .contact_us{
+.my-card
+  {
+  width: 1800px;
+  margin-right: 30%;
+  }
+  .my-card2
+  {
+  width: 1800px;
+  margin-left: 30%;
+  }
+   .my-card3
+  {
+  width: 1800px;
+  height: 280px;
+  }
+  .contact_us{
 
       background: url(https://image.winudf.com/v2/image/Y29tLndLaWRzU2Nob29sXzUxMzE2MTZfc2NyZWVuXzBfaml2N2QzamI/screen-0.jpg?fakeurl=1&type=.jpg);
       background-size: cover;
@@ -175,7 +172,4 @@ export default {
       background-attachment: fixed;
       background-repeat: no-repeat;
     }
-#barra2{
-margin-bottom: 2%;
-}
 </style>
